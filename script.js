@@ -86,51 +86,12 @@ const translations = {
     contact_title: "TheHeem과 다음 지능형 시스템을 구축하세요.",
     contact_text: "파트너십, 프로젝트, 기술 논의는 이메일로 문의해 주세요.",
   },
-  zh: {
-    hero_eyebrow: "来自韩国的 AI 与 ICT 创新",
-    hero_title: "TheHeem 为互联产业建设智能系统。",
-    hero_text:
-      "我们开发实用型 AI 软件、连接设备平台和 ICT 基础设施，帮助组织更精准地感知、判断和运营。",
-    hero_primary: "查看解决方案",
-    hero_secondary: "联系 TheHeem",
-    strip_ai: "应用智能",
-    strip_ict: "互联基础设施",
-    strip_korea: "首尔团队",
-    company_eyebrow: "Company",
-    company_title: "专注于真实场景智能化的科技公司。",
-    company_text:
-      "TheHeem 覆盖人工智能、信息通信技术、边缘设备和数字服务基础设施。我们的目标是把复杂数据与连接硬件转化为可靠、实用、可落地运行的系统。",
-    fact_01_label: "Focus",
-    fact_01_value: "AI 软件与 ICT 平台",
-    fact_02_label: "Base",
-    fact_02_value: "韩国首尔",
-    fact_03_label: "Mission",
-    fact_03_value: "创造实际价值的智能技术",
-    solutions_eyebrow: "Solutions",
-    solutions_title: "连接数据、设备与决策的系统。",
-    solution_01_title: "AI 软件",
-    solution_01_text: "面向运营场景的智能分析、预测、自动化与工作流支持。",
-    solution_02_title: "连接设备",
-    solution_02_text: "采集并传递可信现场数据的边缘硬件、传感器、摄像头和设备服务。",
-    solution_03_title: "ICT 基础设施",
-    solution_03_text: "面向互联运营的网络、云边架构、仪表盘和服务平台。",
-    tech_eyebrow: "Technology",
-    tech_title: "为部署、维护和增长而设计。",
-    tech_panel_title: "核心能力",
-    tech_01: "计算机视觉与数据智能",
-    tech_02: "云端与边缘服务架构",
-    tech_03: "设备集成与监控",
-    tech_04: "运营仪表盘与分析",
-    contact_eyebrow: "Contact",
-    contact_title: "与 TheHeem 一起建设下一代智能系统。",
-    contact_text: "合作、项目和技术沟通，请通过邮件联系 TheHeem。",
-  },
 };
 
 function setLanguage(lang) {
   const dictionary = translations[lang] || translations.en;
 
-  document.documentElement.lang = lang === "ko" ? "ko" : lang === "zh" ? "zh-CN" : "en";
+  document.documentElement.lang = lang === "ko" ? "ko" : "en";
   document.querySelectorAll("[data-i18n]").forEach((node) => {
     const key = node.dataset.i18n;
     node.textContent = dictionary[key];
@@ -167,4 +128,5 @@ document.querySelectorAll(".solution-card").forEach((card) => {
   });
 });
 
-setLanguage(localStorage.getItem("theheem_language") || "en");
+const savedLanguage = localStorage.getItem("theheem_language");
+setLanguage(savedLanguage === "ko" ? "ko" : "en");
