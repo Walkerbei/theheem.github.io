@@ -228,6 +228,36 @@ h1 {
   margin-top: 34px;
 }
 
+.hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  max-width: 780px;
+  margin-top: 28px;
+}
+
+.hero-metrics article {
+  min-height: 92px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+.hero-metrics strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.hero-metrics span {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
 .button {
   display: inline-flex;
   min-height: 48px;
@@ -319,6 +349,7 @@ h2 {
 .solution-card,
 .tech-panel,
 .platform-grid article,
+.suite-grid article,
 .use-grid article,
 .deployment-steps li {
   border: 1px solid var(--line);
@@ -406,6 +437,67 @@ h2 {
 
 .platform-grid p {
   margin-bottom: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.product-suite {
+  background: #fff;
+}
+
+.suite-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.suite-grid article {
+  position: relative;
+  min-height: 280px;
+  overflow: hidden;
+  padding: 24px;
+}
+
+.suite-grid article::before,
+.intel-layout article::before,
+.use-grid article::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background: radial-gradient(
+    circle at var(--x, 50%) var(--y, 50%),
+    rgba(66, 181, 200, 0.16),
+    transparent 34%
+  );
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.suite-grid article:hover::before,
+.intel-layout article:hover::before,
+.use-grid article:hover::before {
+  opacity: 1;
+}
+
+.suite-grid span {
+  display: inline-flex;
+  min-height: 30px;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 8px;
+  color: #fff;
+  background: var(--blue);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.suite-grid h3 {
+  margin: 28px 0 12px;
+  font-size: 24px;
+}
+
+.suite-grid p {
   color: var(--muted);
   line-height: 1.7;
 }
@@ -555,6 +647,145 @@ h2 {
   bottom: 16%;
 }
 
+.console-section {
+  background: var(--charcoal);
+  color: #fff;
+}
+
+.console-section .eyebrow {
+  color: var(--green);
+}
+
+.console-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.5fr);
+  gap: clamp(22px, 4vw, 48px);
+  align-items: stretch;
+}
+
+.console-panel {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
+}
+
+.console-toolbar {
+  display: flex;
+  gap: 8px;
+  padding: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.console-toolbar span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.38);
+}
+
+.console-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 16px;
+  padding: 16px;
+}
+
+.console-map {
+  position: relative;
+  min-height: 360px;
+  overflow: hidden;
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(135deg, rgba(66, 181, 200, 0.28), rgba(13, 95, 140, 0.2));
+  background-size: 42px 42px, 42px 42px, cover;
+}
+
+.console-map::before {
+  position: absolute;
+  inset: 16%;
+  content: "";
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 8px;
+}
+
+.console-map::after {
+  position: absolute;
+  left: 12%;
+  right: 18%;
+  top: 48%;
+  height: 2px;
+  content: "";
+  background: rgba(106, 191, 143, 0.72);
+}
+
+.pulse {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 0 10px rgba(106, 191, 143, 0.16);
+}
+
+.pulse-a {
+  left: 22%;
+  top: 34%;
+}
+
+.pulse-b {
+  right: 28%;
+  top: 48%;
+}
+
+.pulse-c {
+  left: 48%;
+  bottom: 22%;
+}
+
+.console-feed {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.console-feed div,
+.console-points article {
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.console-feed strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.console-feed span,
+.console-points p {
+  color: rgba(255, 255, 255, 0.68);
+  line-height: 1.55;
+}
+
+.console-points {
+  display: grid;
+  gap: 12px;
+}
+
+.console-points span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
 .intelligence {
   background: #f7fafb;
 }
@@ -566,6 +797,8 @@ h2 {
 }
 
 .intel-layout article {
+  position: relative;
+  overflow: hidden;
   min-height: 300px;
   padding: 24px;
   border: 1px solid var(--line);
@@ -603,6 +836,8 @@ h2 {
 }
 
 .use-grid article {
+  position: relative;
+  overflow: hidden;
   min-height: 250px;
   padding: 24px;
 }
@@ -725,8 +960,10 @@ footer {
 
   .company-layout,
   .platform-layout,
+  .suite-grid,
   .solution-grid,
   .technology-grid,
+  .console-layout,
   .intel-layout,
   .use-grid,
   .deployment-steps {
@@ -760,7 +997,9 @@ footer {
   }
 
   .data-flow,
-  .platform-grid {
+  .platform-grid,
+  .hero-metrics,
+  .console-body {
     grid-template-columns: 1fr;
   }
 

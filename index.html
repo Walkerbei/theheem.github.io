@@ -63,6 +63,20 @@
             <a class="button primary" href="#solutions" data-i18n="hero_primary">Explore platform</a>
             <a class="button secondary" href="#contact" data-i18n="hero_secondary">Contact TheHeem</a>
           </div>
+          <div class="hero-metrics" aria-label="Platform capability summary">
+            <article>
+              <strong>RTLS</strong>
+              <span data-i18n="hero_metric_01">Real-time indoor location</span>
+            </article>
+            <article>
+              <strong>Fusion</strong>
+              <span data-i18n="hero_metric_02">Multi-sensor context model</span>
+            </article>
+            <article>
+              <strong>Ops AI</strong>
+              <span data-i18n="hero_metric_03">Event-driven operation insight</span>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -145,6 +159,35 @@
         </div>
       </section>
 
+      <section class="section product-suite">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="suite_eyebrow">Product Suite</p>
+          <h2 data-i18n="suite_title">Modular products for positioning, fusion, and operations.</h2>
+        </div>
+        <div class="suite-grid">
+          <article>
+            <span>Locate</span>
+            <h3 data-i18n="suite_01_title">Indoor location service</h3>
+            <p data-i18n="suite_01_text">Track people, assets, zones, routes, and events across floors and complex indoor spaces.</p>
+          </article>
+          <article>
+            <span>Fusion</span>
+            <h3 data-i18n="suite_02_title">Sensing data fusion</h3>
+            <p data-i18n="suite_02_text">Combine positioning, sensors, device telemetry, map layers, and business rules into a usable data model.</p>
+          </article>
+          <article>
+            <span>Ops</span>
+            <h3 data-i18n="suite_03_title">Operations cockpit</h3>
+            <p data-i18n="suite_03_text">Monitor live sites, review events, receive alerts, and understand operational patterns from one console.</p>
+          </article>
+          <article>
+            <span>API</span>
+            <h3 data-i18n="suite_04_title">Integration layer</h3>
+            <p data-i18n="suite_04_text">Connect location intelligence with facility systems, workflow tools, dashboards, and partner services.</p>
+          </article>
+        </div>
+      </section>
+
       <section class="section solutions" id="solutions">
         <div class="section-heading">
           <p class="eyebrow" data-i18n="solutions_eyebrow">Solutions</p>
@@ -191,11 +234,53 @@
             </ul>
           </div>
           <div class="system-map" aria-label="System architecture diagram">
-            <div class="node node-primary">Fusion</div>
-            <div class="node">Position</div>
-            <div class="node">Sensors</div>
-            <div class="node">AI</div>
-            <div class="node">Maps</div>
+            <div class="node node-primary" data-i18n="node_fusion">Fusion</div>
+            <div class="node" data-i18n="node_position">Position</div>
+            <div class="node" data-i18n="node_sensors">Sensors</div>
+            <div class="node" data-i18n="node_ai">AI</div>
+            <div class="node" data-i18n="node_maps">Maps</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section console-section">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="console_eyebrow">Operations Console</p>
+          <h2 data-i18n="console_title">Designed for live sites, not static reports.</h2>
+        </div>
+        <div class="console-layout">
+          <div class="console-panel" aria-label="Illustrative operations console">
+            <div class="console-toolbar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="console-body">
+              <div class="console-map">
+                <span class="pulse pulse-a"></span>
+                <span class="pulse pulse-b"></span>
+                <span class="pulse pulse-c"></span>
+              </div>
+              <div class="console-feed">
+                <div><strong>Zone A</strong><span data-i18n="console_feed_01">Asset movement detected</span></div>
+                <div><strong>Gate 03</strong><span data-i18n="console_feed_02">Congestion trend rising</span></div>
+                <div><strong>Floor 2</strong><span data-i18n="console_feed_03">Sensor quality normal</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="console-points">
+            <article>
+              <span data-i18n="console_point_01_label">Observe</span>
+              <p data-i18n="console_point_01_text">See location, sensor, map, and event context together.</p>
+            </article>
+            <article>
+              <span data-i18n="console_point_02_label">Detect</span>
+              <p data-i18n="console_point_02_text">Identify movement patterns, dwell time, congestion, and abnormal events.</p>
+            </article>
+            <article>
+              <span data-i18n="console_point_03_label">Operate</span>
+              <p data-i18n="console_point_03_text">Turn insight into alerts, tasks, reports, APIs, and site optimization.</p>
+            </article>
           </div>
         </div>
       </section>
